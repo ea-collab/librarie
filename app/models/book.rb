@@ -27,22 +27,15 @@ class Book < ActiveRecord::Base
          "title asc, created_at desc")
   end
 
-  def google_volume
-    google_volumes = self.isbn.blank? ?
-			get_google_volume_by_title(self.title) :
-			get_google_volume_by_isbn(self.isbn)
-		google_volumes.first
-  end
-
-
-  def self.get_google_volume_by_isbn(value)
-	GoogleBooks.search('isbn:#{value}', {
-					count: 1, api_key: GOOGLE_API_KEY})
-	end
-	
-	def self.get_google_volume_by_title(value)
-	GoogleBooks.search('intitle:#{value}', {
-					count: 1, api_key: GOOGLE_API_KEY})
-	end
+	def google_volume
+		if self.isbn.blank?
+			nil
+		else		
+		volumes = GoogleBooks.search("isbn:#{self.isbn}", {	
+		  count: 1, api_key: GOOGLE_API_KEY })
+		volume = volumes.count > 0 ? volumes.first : nil
+		end
+	end	
+    
   
 end
