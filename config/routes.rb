@@ -12,6 +12,6 @@ Library::Application.routes.draw do
   end
   
   #root :to => 'books#index'
-  root :to => 'site#index'
+  root :to => 'books#index'
 
 end

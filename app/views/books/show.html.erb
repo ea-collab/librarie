@@ -16,6 +16,12 @@
 	<%= @book.description %>
 </p>
 
+<% if @google_volume %>
+<div id="google-volume">
+  <% render partial: "google_volume", locals: {google_volume: @google_volume} %>
+</div>
+<% end %>
+
 <%= link_to "Edit", edit_book_path(@book), class: 'btn' %>
 
 <span id="reservation-links">

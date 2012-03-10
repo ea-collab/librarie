@@ -21,6 +21,7 @@ class BooksController < ApplicationController
   
   def show
     @book_reservation = @book.reservation
+		@google_volume = @book.google_volume
   end
   
   def new
