@@ -8,8 +8,6 @@ class Book < ActiveRecord::Base
   validates_with IsbnValidator
   
   has_many :reservations
-
-  attr_accessor :google_volume
   
   def reservation
     self.reservations.where(state: 'reserved').first
@@ -30,15 +28,21 @@ class Book < ActiveRecord::Base
   end
 
   def google_volume
-    @google_volume ||= get_google_volume_by_isbn(self.isbn)
+    google_volumes = self.isbn.blank? ?
+			get_google_volume_by_title(self.title) :
+			get_google_volume_by_isbn(self.isbn)
+		google_volumes.first
   end
 
 
-  private
-
-  def get_google_volume_by_isbn(value)
-	GoogleBooks.search(
-					'isbn: #{value}', {:count => 1, :api_key => GOOGLE_API_KEY})
+  def self.get_google_volume_by_isbn(value)
+	GoogleBooks.search('isbn:#{value}', {
+					count: 1, api_key: GOOGLE_API_KEY})
+	end
+	
+	def self.get_google_volume_by_title(value)
+	GoogleBooks.search('intitle:#{value}', {
+					count: 1, api_key: GOOGLE_API_KEY})
 	end
   
 end

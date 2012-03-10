@@ -16,9 +16,9 @@
 	<%= @book.description %>
 </p>
 
-<% if @google_volume %>
+<% if @book.google_volume %>
 <div id="google-volume">
-  <% render partial: "google_volume", locals: {google_volume: @google_volume} %>
+  <% render partial: "google_volume", locals: {google_volume: @book.google_volume} %>
 </div>
 <% end %>
 
