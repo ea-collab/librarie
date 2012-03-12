@@ -1,0 +1,23 @@
+<%= form_tag search_books_path, method: :get do %>
+	<div class="row">
+		<div class="span8">
+					<h1>Your Daily Food for Thought</h1>
+		</div>	
+		<div class="span4">
+			<%= text_field_tag :query, params[:query] || 'Search by title' %>
+			<%= submit_tag 'Search', class: 'btn-primary' %>
+			<div>
+				<%= query_by_radio_tag :title %>
+				<%= query_by_radio_tag :isbn %>
+				<%= query_by_radio_tag :authors %>
+				<br />
+				<br />
+				<p>
+				<% if current_user %>
+					<%= link_to "Add a book", new_book_path, class: 'btn' %>	
+				<% end %>
+				</p>	
+			</div>
+		</div>
+	</div>
+<% end %>

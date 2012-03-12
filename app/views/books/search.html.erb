@@ -1,12 +1,20 @@
-<%= render partial: "search" %>
+<%= render partial: "search_panel" %>
 
 <% if @books.size > 0 %>
-		<dl>
-		<% @books.each do |book| %>
-		  <dt><%= link_to book.title, book_path(book) %></dt>
-		  <dd><%= book.authors %></dd>
-		<% end %>
-		</dl>
+			<table class="table table-striped">
+			<tr>
+				<th>Title</th>
+				<th>Authors</th>
+				<th>ISBN</th>
+			</tr>
+			<% @books.each do |book| %>
+				<tr>	
+					<td><%= link_to book.title, book_path(book) %></td>
+					<td><%= book.authors %></td>
+					<td><%= book.isbn %></td>
+				</tr>
+			<% end %>
+		</table>
 	<% else %>
 		<h2>Sorry, we haven't found any books!</h2>
 	<% end %>

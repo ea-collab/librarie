@@ -5,7 +5,7 @@
 				<div class="span2">
 					<%= volume = book.google_volume
 							if volume && volume.image_link
-								link_to image_tag(volume.image_link, size: "120x155",
+								link_to image_tag(volume.image_link, width: "120px", height: "155px",
 									alt: book.title), book_path(book) 				
 						 	else
 					 		 	link_to image_tag("noImageAvailable.jpeg", size: "120x155",
