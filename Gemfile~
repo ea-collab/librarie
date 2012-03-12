@@ -17,6 +17,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 gem 'json'
@@ -32,8 +33,10 @@ end
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'static'
 
+gem 'googlebooks'
+
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.0', :require => 'bcrypt'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -45,4 +48,6 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 # gem 'ruby-debug'
 
 gem 'heroku'
+gem 'koala'
+gem 'annotate'
 

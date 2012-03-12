@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: books
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)
+#  authors     :string(255)
+#  description :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#  isbn        :string(255)
+#
+
 class Book < ActiveRecord::Base
   
 	GOOGLE_API_KEY = 'AIzaSyA37vpAdj7HrMcpuxKtCB3DdMtzmjse5dI'
