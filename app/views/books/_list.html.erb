@@ -5,16 +5,18 @@
 				<div class="span2">
 					<%= volume = book.google_volume
 							if volume && volume.image_link
-								link_to image_tag(volume.image_link, width: "120px", height: "155px",
-									alt: book.title), book_path(book) 				
+								link_to image_tag(volume.image_link, alt: book.title, 
+									style: "max-width: 120px; max-height: 155px;"), book_path(book), 
+									rel: "popover", title: book.title 									 				
 						 	else
-					 		 	link_to image_tag("noImageAvailable.jpeg", size: "120x155",
-									alt: "no_image_available"), book_path(book)
-					 		end %>
-					<p> <%= link_to book.title.truncate(19), book_path(book)  %> </p>					
+					 		 	link_to image_tag("noImageAvailable.jpeg", alt: book.title, 
+									style: "max-width: 120px; max-height: 155px;"), 
+									book_path(book), rel: "popover", title: book.title
+					 		end %>			
 				</div>
 			<% end %>
 		</div>
+		<br />
 	<% end %>
 <% else %>
 	<h2>Sorry, we haven't found any books!</h2>

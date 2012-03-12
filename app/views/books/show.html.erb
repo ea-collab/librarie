@@ -18,11 +18,12 @@
 </div>
 
 <div class="row">
-	<div class="span3">
+	<div class="span12">
 		<% if @google_volume %>
 			<div id="google-volume">
 				<%= render partial: "google_volume", locals: {google_volume: @google_volume} %>
 			</div>
+			<br />
 		<% end %>
 
 		<%= link_to "Edit", edit_book_path(@book), class: 'btn' %>
@@ -36,12 +37,7 @@
 		<p>
 			<%= link_to "Back to list", books_path %>
 		</p>
-
-
 		<div id="reservation-form" style="display: none;">
 		</div>
-	</div>
-
-	<div id="google_viewer" class="span9">
 	</div>
 </div>

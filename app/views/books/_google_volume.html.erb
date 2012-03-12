@@ -1,23 +1,31 @@
-<% if google_volume.ratings_count %>
-	<p>
-		Rating: <%= google_volume.average_rating %> 
-		(<%= google_volume.ratings_count %> reviews) 
-	</p>
-<% end %>
+<div class="row">
 
-<p>
-	Publisher: <%= google_volume.publisher %>
-</p>
+	<div class="span2">
+		<%= image_tag(@google_volume.image_link, alt: @google_volume.title) %>
+	</div>
+	<br />
+	<div class="span6">
+		<% if google_volume.ratings_count %>
+			<p>
+				Rating: <%= google_volume.average_rating %> 
+				(<%= google_volume.ratings_count %> reviews) 
+			</p>
+		<% end %>	
+		<p>
+			Publisher: <%= google_volume.publisher %>
+		</p>
 
-<p>
-	Pages: <%= google_volume.page_count %>
-</p>
+		<p>
+			Pages: <%= google_volume.page_count %>
+		</p>
 
-<p>
-	Publishing date: <%= google_volume.published_date %>
-</p>
+		<p>
+			Publishing date: <%= google_volume.published_date %>
+		</p>
 
-<p>
-	ISBN: <%= google_volume.isbn %>
-</p>
+		<p>
+			ISBN: <%= google_volume.isbn %>
+		</p>
+	</div>
 
+</div>
