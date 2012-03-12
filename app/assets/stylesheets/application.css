@@ -2,4 +2,8 @@
 /* = require_self */
 /* = require_tree . */
 
-
+#user_nav
+{
+	float: right;
+	margin-bottom: 30px;
+}

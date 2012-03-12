@@ -24,8 +24,45 @@ command_line_applications_in_ruby:
   description: "As Ruby pro David Copeland explains, writing a command-line application that is self-documenting, robust, adaptable and forever useful is easier than you might think. Ruby is particularly suited to this task, since it combines high-level abstractions with “close to the metal” system interaction wrapped up in a concise, readable syntax. Moreover, Ruby has the support of a rich ecosystem of open-source tools and libraries."
   isbn: 978-1-93435-691-3
 
-steppenwolf:
-  title: Steppenwolf
-  authors: Hermann Hesse
-  description: A great book
-  isbn: 978-0-87586-784-7
+rails_anti_pattern:
+	title: "Rails AntiPatterns: Best Practice Ruby on Rails Refactoring"
+	authors: "Chad Pytel, Tammer Saleh"
+	description: "The Complete Guide to Avoiding and Fixing Common Rails 3 Code and Design Problems.
+As developers worldwide have adopted the powerful Ruby on Rails web framework, many have fallen victim to common mistakes that reduce code quality, performance, reliability, stability, scalability, and maintainability."
+	isbn: 9780321604811
+
+beginning_Rails_3:
+	title: "Beginning Rails 3"
+	authors: "Cloves Carneiro, Rida Al Barazi"
+	description: "Beginning Rails 3is the practical starting point for anyone wanting to learn how to build dynamic web applications using the Rails framework for Ruby. You'll learn how all of the components of Rails fit together and how you can leverage them to create sophisticated web applications with less code and more joy. This book is particularly well suited to those with little or no experience with web application development, or who have some experience but are new to Rails."
+	isbn: 9781430224334
+
+rub_on_rails_bible:
+	title: "Ruby on Rails Bible"
+	authors: "Timothy Fisher"
+	description: "Thanks to the explosive growth in popularity of the Rails framework, the equally popular Ruby programming language now has a great place to hang its hat. The powerful combination of the two provides the perfect toolset to create Web applications that feature concise code, clean syntax, and easy maintenance. This must-have book is your best guide on how to jump on the RoR bandwagon, from the basics of Ruby programming to advanced techniques for experienced Rails developers."
+	isbn: 9780470258224
+
+harry_potter_and_the_deathly_hallows:
+	title: "Harry Potter and the Deathly Hallows"
+	authors: "J. K. Rowling"
+	description: "Harry Potter is preparing to leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only by destroying Voldemort"
+	isbn: 9781408810293
+
+harry_potter_and_the_order_of_the_phoenix:
+	title: "Harry Potter and the Order of the Phoenix"
+	authors: "J. K. Rowling"
+	description: "When the government of the magic world and authorities at Hogwarts School of Witchcraft and Wizardry refuse to believe in the growing threat of a freshly revived Lord Voldemort, fifteen-year-old Harry Potter finds support from his loyal friends in facing the evil wizard and other new terrors.As Harry faces his upcoming fifth year at Hogwarts Academy, there are increasing rumors of dark times coming and of Lord Voldemort's return to power, and a secret anti-Voldemort society, "
+	isbn: 9781439520024
+
+the_da_vinci_code:
+	title: "The Da Vinci Code"
+	authors: "Dan Brown"
+	description: "Harvard professor Robert Langdon receives an urgent late-night phone call while on business in Paris: the elderly curator of the Louvre has been brutally murdered inside the museum. Alongside the body, police have found a series of baffling codes. "
+	isbn: 9781409091158
+
+war_and_peace:
+	title: "War and Peace"
+	authors: "Leo Tolstoj"
+	description: "A new version – the one Tolstoy originally intended, but has been hitherto unpublished – of Russia’s most famous novel; with a different ending, fewer digressions and an altered view of Napoleon – it’s time to look afresh at one of the world’s favourite books."
+	isbn: 9780007396993

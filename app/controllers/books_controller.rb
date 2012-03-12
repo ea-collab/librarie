@@ -3,10 +3,11 @@ class BooksController < ApplicationController
   before_filter :find_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = Book.all
+		@books_popular = Book.get_popular(18)
+		@books_latest = Book.get_latest(18)
     respond_to do |format|
       format.html
-      format.xml { render xml: @books.to_xml }
+      format.xml { render xml: Book.all.to_xml }
     end
   end
   
@@ -16,7 +17,6 @@ class BooksController < ApplicationController
       when 'authors' then Book.search_by_authors(params[:query])
       else                Book.search_by_title(params[:query])
     end
-    render action: :index
   end
   
   def show
