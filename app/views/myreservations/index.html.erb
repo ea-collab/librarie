@@ -1,0 +1,13 @@
+<h2> My Reservations </h2>
+<% if @my_reservations.size > 0 %>
+  <dl>
+  <% @my_reservations.each do |reservation| %>
+  <strong>Book Title:</strong>  <dt><%= reservation.book.title %></dt>
+  <br />
+  <strong>Due Date: </strong>
+    <dd><%= reservation.dueDate %></dd>
+  <% end %>
+  </dl>
+<% else %>
+  <h2><strong>No reservations found!</strong></h2>
+<% end %>
