@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
   def create
     @book = Book.find(params[:book_id])
     @reservation = @book.reservations.new(params[:reservation])
+    @reservation.dueDate = Time.now + 14.days
     if @reservation.save
       flash[:notice] = "Book reserved"
       #tell facebook you are reading a book

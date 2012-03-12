@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120311210633) do
+ActiveRecord::Schema.define(:version => 20120312101239) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20120311210633) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "dueDate"
   end
 
   add_index "reservations", ["book_id"], :name => "index_reservations_on_book_id"
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20120311210633) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "fbtoken"
+    t.integer  "hasProfile"
   end
 
 end

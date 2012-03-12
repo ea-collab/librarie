@@ -4,11 +4,16 @@
 <p>Here we display a list of users books, etc</p>
 
 <h1>Home#show</h1>
-
+<% if @user_has_profile %>
+<%= link_to "Edit Profile", "/profiles/#{@profile.id}/edit" %>
+<% else %>
 <%= link_to "Add profile information", new_profile_path %>
+<% end %>
 <br />
 <% if @user_on_fb %>
-<p>Account associated with Facebook</p>
+<p><strong>Account associated with Facebook</strong></p>
 <% else %>
 <%= link_to "Associate account with Facebook", '/facebooks/login'%>
 <% end %>
+
+<%= link_to "My reservations", '/myreservations/index' %>

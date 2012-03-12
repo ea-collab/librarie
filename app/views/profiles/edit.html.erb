@@ -1,2 +1,47 @@
-<h1>Profiles#edit</h1>
-<p>Find me in app/views/profiles/edit.html.erb</p>
+<h1>Profile</h1>
+
+<%= form_for @profile do |f| %>
+  <% if @profile.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @profile.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :postcode %>
+    <%= f.text_field :postcode %>
+  </p>
+  <p>
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :aage_group %>
+    <%= f.text_field :age_group %>
+  </p>
+  <p>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </p>
+  <p class="button"><%= f.submit %></p>
+<% end %>
+
+
+
+
