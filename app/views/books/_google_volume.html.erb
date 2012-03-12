@@ -1,15 +1,16 @@
 <% if google_volume.ratings_count %>
 	<p>
-		<%= google_volume.average_rating %>
-	</p>
-
-	<p>
-		<%= google_volume.ratings_count %> ratings
+		Rating: <%= google_volume.average_rating %> 
+		(<%= google_volume.ratings_count %> reviews) 
 	</p>
 <% end %>
 
 <p>
 	Publisher: <%= google_volume.publisher %>
+</p>
+
+<p>
+	Pages: <%= google_volume.page_count %>
 </p>
 
 <p>
