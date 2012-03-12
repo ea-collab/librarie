@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120309190413) do
+ActiveRecord::Schema.define(:version => 20120311210633) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(:version => 20120309190413) do
     t.datetime "updated_at"
     t.string   "isbn"
   end
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "postcode"
+    t.string   "country"
+    t.string   "age_group"
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "profiles", ["user_id"], :name => "index_profiles_on_user_id"
 
   create_table "reservations", :force => true do |t|
     t.integer  "book_id"
@@ -38,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20120309190413) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "fbtoken"
   end
 
 end

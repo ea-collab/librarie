@@ -17,6 +17,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 gem 'json'
@@ -47,4 +48,6 @@ gem 'googlebooks'
 # gem 'ruby-debug'
 
 gem 'heroku'
+gem 'koala'
+
 

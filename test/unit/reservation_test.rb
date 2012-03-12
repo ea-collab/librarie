@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id         :integer         not null, primary key
+#  book_id    :integer
+#  state      :string(255)
+#  email      :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'test_helper'
 
 class ReservationTest < ActiveSupport::TestCase
