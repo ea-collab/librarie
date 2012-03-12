@@ -20,11 +20,9 @@ class ReservationsController < ApplicationController
       	      @graph = Koala::Facebook::GraphAPI.new(session["access_token"])
       	      @graph.put_wall_post("I am reading a book called '#{@book.title}'")
       else
-      #user is not obliged to tell on facebook, do nothing, maybe in Intermediate
-      
+      #user is not obliged to tell on facebook, do nothing, maybe in Intermediate      
       end
-      
-      
+            
       respond_to do |format|
         format.html { redirect_to book_path(@book) }
         format.js

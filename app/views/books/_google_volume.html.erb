@@ -1,10 +1,12 @@
-<p>
-	<%= google_volume.average_rating %>
-</p>
+<% if google_volume.ratings_count %>
+	<p>
+		<%= google_volume.average_rating %>
+	</p>
 
-<p>
-	<%= google_volume.ratings_count %> ratings
-</p>
+	<p>
+		<%= google_volume.ratings_count %> ratings
+	</p>
+<% end %>
 
 <p>
 	Publisher: <%= google_volume.publisher %>
@@ -14,4 +16,7 @@
 	Publishing date: <%= google_volume.published_date %>
 </p>
 
+<p>
+	ISBN: <%= google_volume.isbn %>
+</p>
 

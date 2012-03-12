@@ -1,39 +1,47 @@
-<h1><%= @book.title %></h1>
+<div class="row">
+	<div class="span12">
+		<h1><%= @book.title %></h1>
+				<p>
+			by <%= @book.authors %>
+		</p>
 
-<div id="reservation-status">
-  <%= render partial: "reservation_status", locals: {reservation: @book_reservation} %>
+		<div id="reservation-status">
+		 <p> 
+			<%= render partial: "reservation_status", locals: {reservation: @book_reservation} %>
+		</p>
+		</div>
+
+		<p>
+			<%= @book.description %>
+		</p>
+	</div>
 </div>
 
-<p>
-	by <%= @book.authors %>
-</p>
+<div class="row">
+	<div class="span3">
+		<% if @google_volume %>
+			<div id="google-volume">
+				<%= render partial: "google_volume", locals: {google_volume: @google_volume} %>
+			</div>
+		<% end %>
 
-<p>
-	ISBN: <%= @book.isbn %>
-</p>
+		<%= link_to "Edit", edit_book_path(@book), class: 'btn' %>
 
-<p>
-	<%= @book.description %>
-</p>
+		<span id="reservation-links">
+			<%= render partial: "reservation_links", locals: {book: @book, reservation: @book_reservation} %>
+		</span>
 
-<% if @book.google_volume %>
-<div id="google-volume">
-  <%= render partial: "google_volume", locals: {google_volume: @book.google_volume} %>
-</div>
-<% end %>
+		<%= link_to "Delete", book_path, method: :delete, class: 'btn btn-danger' %>
 
-<%= link_to "Edit", edit_book_path(@book), class: 'btn' %>
-
-<span id="reservation-links">
-  <%= render partial: "reservation_links", locals: {book: @book, reservation: @book_reservation} %>
-</span>
-
-<%= link_to "Delete", book_path, method: :delete, class: 'btn btn-danger' %>
-
-<p>
-  <%= link_to "Back to list", books_path %>
-</p>
+		<p>
+			<%= link_to "Back to list", books_path %>
+		</p>
 
 
-<div id="reservation-form" style="display: none;">
+		<div id="reservation-form" style="display: none;">
+		</div>
+	</div>
+
+	<div id="google_viewer" class="span9">
+	</div>
 </div>

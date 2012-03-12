@@ -9,7 +9,7 @@
 									alt: book.title), book_path(book) 				
 						 	else
 					 		 	link_to image_tag("noImageAvailable.jpeg", size: "120x155",
-									alt: "no_image_available"), book_path(book) 
+									alt: "no_image_available"), book_path(book)
 					 		end %>
 					<p> <%= link_to book.title.truncate(19), book_path(book)  %> </p>					
 				</div>
