@@ -1,0 +1,21 @@
+<% if books.size > 0 %>
+	<%= books.in_groups_of(6, false) do |group| %>
+	  <div class="row">
+			<% group.each do |book| %>
+				<div class="span2">
+					<%= volume = book.google_volume
+							if volume && volume.image_link
+								link_to image_tag(volume.image_link, size: "120x155",
+									alt: book.title), book_path(book) 				
+						 	else
+					 		 	link_to image_tag("noImageAvailable.jpeg", size: "120x155",
+									alt: "no_image_available"), book_path(book) 
+					 		end %>
+					<p> <%= link_to book.title.truncate(19), book_path(book)  %> </p>					
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+<% else %>
+	<h2>Sorry, we haven't found any books!</h2>
+<% end %>
