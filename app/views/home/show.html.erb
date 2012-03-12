@@ -4,8 +4,11 @@
 <p>Here we display a list of users books, etc</p>
 
 <h1>Home#show</h1>
-
+<% if @user_has_profile %>
+<%= link_to "Edit Profile", "/profiles/#{current_user.id}/edit" %>
+<% else %>
 <%= link_to "Add profile information", new_profile_path %>
+<% end %>
 <br />
 <% if @user_on_fb %>
 <p><strong>Account associated with Facebook</strong></p>
