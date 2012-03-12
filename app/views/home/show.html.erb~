@@ -8,7 +8,7 @@
 <%= link_to "Add profile information", new_profile_path %>
 <br />
 <% if @user_on_fb %>
-<p><strong>Account associated with Facebook</strong></p>
+<p>Account associated with Facebook</p>
 <% else %>
 <%= link_to "Associate account with Facebook", '/facebooks/login'%>
 <% end %>
